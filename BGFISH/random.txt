@@ -1,0 +1,200 @@
+<?php
+	session_start();
+	//$user =$_SESSION["user"];
+?>
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BG FISH</title>
+		
+		 <link rel="stylesheet" href="style1.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<body id="body" >
+	
+	
+		<ul>
+  <li><a href="about.php">За нас</a></li>
+  <li><a href="contact.php">Контакти</a></li>
+  
+  <li><input id="search" type="text" placeholder="Търси..."></li>
+  <li><button id="searchButton" type="submit"><i class="fa fa-search"></i></button></li>
+  
+  
+	<?php
+		
+		
+		
+		
+		
+		if(isset ($_SESSION["user"])){
+			
+		echo '<li class="dropdown">';
+		echo '<a href="editAccount.php"><i class="fa fa-fw fa-user"></i>'.$_SESSION["username"].'</a>';
+		echo '<div class="dropdown-content">';
+		
+		echo	'<a href="editAccount.php">Профил</a>';
+		if(!strcmp($_SESSION["role"], "admin")){
+				echo '<a href="adminPanel.php">Админски панел</a>';
+			}
+		
+		echo	'<a href="conn/logout.php">Изход</a>';
+			
+		}else{
+			
+		echo '<li class="dropdown">';
+		echo '<a href="register.php"><i class="fa fa-fw fa-user"></i>Профил</a>';
+		echo '<div class="dropdown-content">';
+			
+		echo '<div><a href="enter.php">Вход</a>
+			 <a href="register.php">Регистрация</a>
+			 </div>';
+		}
+      ?>
+    </div>
+  </li>
+  <li id="heart">
+  <?php
+  if(isset ($_SESSION["user"])){
+	echo	'<a href="favorites.php"><i class="fa fa-heart-o"></i></a>';
+  }
+  else{
+	  echo '<a href="enter.php"><i class="fa fa-heart-o"></i></a>';
+  }
+  ?>
+  </li>
+  <li id="cart">
+  <a href="#"><i class="fa fa-shopping-cart"></i></a>
+  </li>
+  
+
+</ul><br>
+	
+	
+
+<!-- Footer -->
+<footer>
+    <div id="footer-holder">
+        <span>(C) BG FISH. All rights reserved.</span>
+        <p>Developed by Naiden Naidenov</p>
+    
+
+      <div>
+        <a href ="https://www.facebook.com/profile.php?id=100001291393464" target="_blank">
+        <img src="images/Facebook.png" alt="Facebook" style="width:50px">
+        </a>
+        <a href ="https://github.com/nin4o/REPO2" target="_blank">
+          <img src="images/Github.png" alt="Github" style="width:60px">
+        </a>
+        <a href ="index.php">
+            <img src="images/BgFish.png" alt="BgFish" style="width:50px">
+          </a>
+      </div>
+        
+    </div>
+    </div>
+</footer>
+	</body>
+	</html>
+
+	
+	
+	
+	
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">&bull;Въдици</a>
+  <a href="#">&bull;Макари за риболов</a>
+  <a href="#">&bull;Плувки за риболов</a>
+  <a href="#">&bull;Влакна за риболов</a>
+  <a href="#">&bull;Изкуствени примамки</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Категории</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:110px;
+  background-color:#F5F5F5;
+  font-weight:600;
+  opacity:0.5;
+  
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #333399;
+  display: block;
+  transition: 0.3s;
+ 
+}
+
+.sidenav a:hover {
+  color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo '<div  id="productFrame">',
+		'<form method="post" action="Cart.php">',
+		'<div>'.$product["name"].'</div>',
+		
+		'<input type="hidden" name="hidden_name" value="'.$product["name"].'" >',
+		'<input type="hidden" name="hidden_price" value="'.$product["price"].'" >',
+		'<input type="hidden" name="hidden_ID" value="'.$product["id"].'" >',
+		'<a href="productPage.php?product='.$product["id"].'"><img src="images/'.$product["image"].'" id="productPicture" ></a>',
+		'<input style="margin-top:3px;" type="number" name="quantity" min="1" max="10" value="1">',
+		'<div>'.$product["price"].'</div>',
+		'<input type="submit" name="add" id="btnAddToCart" value="&#128722; Купи">',
+		
+		//'<div>'.$product["category"].'</div>',
+		'</div>';	

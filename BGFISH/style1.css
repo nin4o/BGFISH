@@ -1,0 +1,387 @@
+/*navigation bar*/
+ul {
+  list-style-type: none;
+  margin: -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width:auto;
+  font-size:20px;
+  font-family:Arial;
+  
+}
+
+li {
+  float: left;
+  margin-top:8px;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 25px 27px;
+  text-decoration: none;
+  font-family:Arial;
+
+}
+
+li a:hover, .dropdown:hover .dropbtn  {
+  background-color: white;
+  color:#333399;
+  font-family:Arial;
+}
+
+li.dropdown {
+  display: inline-block;
+  float:right;
+  
+}
+
+#heart{
+	float:right;
+}
+
+#cart{
+	float:right;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333399;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family:Arial;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-family:Arial;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-family:Arial;
+}
+
+
+
+
+#search{
+	
+  float: center;
+    display: block;
+    text-align: left;
+    width: 250px;
+    margin: 16px;
+    padding: 10px;
+	margin-right: 0px;
+	font-family:Arial;
+	
+	
+}
+
+#searchButton{
+
+	
+	padding: 10px 14px;
+  margin-top: 16px;
+  margin-right: 16px;
+  background: #333399;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/*вход и регистрация*/
+#enterORregister{
+	font-size:30px;
+	color:#333399;
+	font-weight: 1000;
+	font-family:Arial;
+	margin-left:250px;
+	
+}
+
+#login{
+	font-size:18px;
+	color:#333399;
+	font-weight: 1000;
+	font-family:Arial;
+	margin-left:100px;
+}
+
+#register{
+	
+	float:right;
+	font-size:18px;
+	color:#333399;
+	font-weight: 1000;
+	margin-right:300px;
+}
+
+/*футър*/
+#footer-holder{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#footer-holderRelative{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+HTML {
+    background: url(images/Freshwater-fishing.jpg);
+    height: 100%;
+    position: relative;
+    background-size: cover;
+	background-size:100%;
+    background-attachment:fixed;
+    background-position:fixed;
+	font-family:Arial;
+	
+	}
+	
+body {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: rgba(255,255,255,.5);
+	
+
+}
+
+
+
+
+::-webkit-scrollbar {
+	display: none;
+}
+#divEmail{
+	padding-left: 75px;
+	margin:10px;
+	
+	
+}
+#divEmail input{
+	padding-right:100px;
+}
+
+#divPass{
+	padding-left:75px;
+	margin:10px;
+}
+
+#divPass input{
+	padding-right:100px;
+}
+
+#btnLog{
+	border-radius:12px;
+	border: none;
+	text-align: center;
+	padding:10px 50px;
+	margin-left:83px;
+	background-color:#333;
+	color:white;
+	
+}
+
+#regText{
+	float:right;
+	margin-right:30px;
+	color:#333399;
+	font-weight: 400;
+}
+
+#reg{
+	border-radius:12px;
+	border: none;
+	text-align: center;
+	padding:10px 50px;
+	margin-left:83px;
+	background-color:#333;
+	color:white;
+}
+
+#about{
+	font-size:33px;
+	color:#333399;
+	font-weight: 1000;
+	font-family:Arial;
+	margin-left:100px;
+	
+}
+
+#aboutUS{
+	margin-left:70px;
+	margin-top:100px;
+	font-size:15px;
+	color:#333399;
+	font-weight: 1000;
+	font-family:Arial;
+}
+
+#editForm{
+	margin-left:200px;
+	margin-top:100px;
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -120px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#mySidenav2 span {
+  position: absolute;
+  left: 0px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav2 span:hover {
+  left: 0;
+}
+
+#kategorii{
+	top: 80px;
+	background-color:#333399;
+	margin-left:0px;
+}
+
+#vudici {
+  top: 140px;
+  background-color: #333399;
+}
+
+#makari {
+  top: 200px;
+  background-color: #333399;
+}
+
+#pluvki {
+  top: 260px;
+  background-color: #333399;
+}
+
+#vlakna {
+  top: 320px;
+  background-color: #333399;
+}
+
+#primamki {
+  top: 380px;
+  background-color: #333399;
+}
+
+
+#productFrame{
+	width:150px; 
+   max-width:150px;
+   display: inline-block;
+   text-align: center;
+   margin-top:0px;
+   margin-left:150px;
+   border: 1px solid black;
+   border-radius: 5px;
+   max-width:150px;
+   min-height:150px;
+
+}
+#productPicture{
+   max-width:150px;
+   min-height:150px;
+  
+  
+}
+
+#productPageID{
+	
+	width:450px;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:-70px;
+    border: 2px solid black;
+	border-radius: 5px;
+}
+
+#productPictureID{
+	max-width:450px;
+		min-height:450px;
+}
+
+#formAdminPanel{
+	margin-left:150px;
+	margin-top:50px;
+	
+}
+
+
+
+#table{
+	text-align:center;
+}
+
+#favProductID{
+	width:150px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 250px;
+	margin-right: auto;
+	margin-top:70px;
+    border: 2px solid black;
+	border-radius: 5px;
+}
+#favProductPictureID{
+	max-width:150px;
+		min-height:150px
+}
+
+#testDelete{
+	border-radius:4px;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	background-color:#990000;
+	color:white;
+}
